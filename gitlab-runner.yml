@@ -4,7 +4,7 @@ services:
     gitlab-runer:
         image: gitlab/gitlab-runner
         volumes:
-            - "/gitlab/gitlab-runner:/etc/gitlab-runner"
+            - "/data/gitlab/gitlab-runner:/etc/gitlab-runner"
             - "/var/run/docker.sock:/var/run/docker.sock"
             - "/etc/hosts:/etc/hosts"
             - "/root/project:/root/project"
