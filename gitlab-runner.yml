@@ -8,9 +8,4 @@ services:
             - "/var/run/docker.sock:/var/run/docker.sock"
             - "/etc/hosts:/etc/hosts"
             - "/root/project:/root/project"
-        networks:
-            - de_host
-
-networks:
-    de_host:
-        driver: host
+        network_mode: "host"
