@@ -1,6 +1,5 @@
 version: "3.7"
 services: 
-
     portainer:
         image: portainer/portainer:latest
         container_name: portainer
@@ -9,7 +8,7 @@ services:
             - "8000:8000"
         volumes: 
             - /var/run/docker.sock:/var/run/docker.sock
-            - portainer_data:/data portainer/portainer
+            - portainer_data:/data/portainer
         restart: always
 
 volumes: 
