@@ -1,0 +1,16 @@
+version: "3.2"
+
+services:
+    gitlab-runer:
+        images: gitlab/gitlab-runner
+        volumes:
+            - "/gitlab/gitlab-runner:/etc/gitlab-runner"
+            - "/var/run/docker.sock:/var/run/docker.sock"
+            - "/etc/hosts:/etc/hosts"
+            - "/root/project:/root/project"
+        networks:
+            - de_host
+
+networks:
+    de_host:
+        driver: host
