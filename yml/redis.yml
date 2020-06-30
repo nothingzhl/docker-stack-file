@@ -6,4 +6,6 @@ services:
         container_name: redis
         ports: 
             - "6379:6379"
+        environment:
+            - requirepass="123456"
         restart: always
