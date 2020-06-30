@@ -8,9 +8,10 @@ services:
             - "27017:27017"
         volumes:
             - mango_data:/data/db
+            - "./initmongo:/docker-entrypoint-initdb.d/"
         environment: 
-            - MONGO_INITDB_ROOT_USERNAME=root
-            - MONGO_INITDB_ROOT_PASSWORD=123456
+            - MONGO_INITDB_ROOT_USERNAME=zhanghanlin
+            - MONGO_INITDB_ROOT_PASSWORD=13956668172
         command: --dbpath /data/db  --auth
         restart: always
         
